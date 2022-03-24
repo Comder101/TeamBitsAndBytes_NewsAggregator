@@ -18,10 +18,10 @@ for th in toi_headings:
 
 
 
-ot_r = requests.get("https://www.outlookindia.com/website/section/national/19/")
+ot_r = requests.get("https://www.outlookindia.com/national")
 ot_soup = BeautifulSoup(ot_r.content, 'html5lib')
 ot_headings = ot_soup.findAll('h4')
-ot_headings = toi_headings[0:15] 
+ot_headings = ot_headings[0:15] 
 ot_news = []
 
 for oth in ot_headings:
@@ -31,7 +31,6 @@ for oth in ot_headings:
 def home(req):
     return render(req, 'index.html')
 def categories(req):
-    
     return render(req, 'PblProject.html', {'toi_news':toi_news, 'ot_news': ot_news})
 
 def aboutx(req):
