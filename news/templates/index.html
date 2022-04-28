@@ -47,7 +47,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'categories'%}">News Aggregator</a>
+            <a class="navbar-brand" href="{% url 'main'%}">News Aggregator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,23 +60,40 @@
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="{% url 'about'%}">About us</a>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'categories_po'%}">Politics</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'categories_sp'%}">Sports</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'categories_edu'%}">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'categories_tec'%}">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'categories_wea'%}">Weather</a>
+                        </li>
+
+                        
+                        <!-- </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li> -->
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Category
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Politics</a></li>
-                                <li><a class="dropdown-item" href="#">Sport</a></li>
-                                <li><a class="dropdown-item" href="#">Education</a></li>
-                                <li><a class="dropdown-item" href="#">Technology</a></li>
-                                <li><a class="dropdown-item" href="#">Weather</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_po'%}">Politics</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_sp'%}">Sport</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_edu'%}">Education</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_tec'%}">Technology</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_wea'%}">Weather</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -124,7 +141,7 @@
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -198,11 +215,11 @@
                           </div>
                           <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault_b" >
-                            <label class="form-check-label" for="flexSwitchCheckDefault_b">sport</label>
+                            <label class="form-check-label" for="flexSwitchCheckDefault_b">Sports</label>
                           </div>
                           <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault_c" >
-                            <label class="form-check-label" for="flexSwitchCheckDefault_c">politics</label>
+                            <label class="form-check-label" for="flexSwitchCheckDefault_c">Politics</label>
                           </div>
 
                         </div>
@@ -214,7 +231,7 @@
                           </div>
                           <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault_e" >
-                            <label class="form-check-label" for="flexSwitchCheckDefault_e">Tech</label>
+                            <label class="form-check-label" for="flexSwitchCheckDefault_e">Technology</label>
                           </div>
 
 
@@ -267,9 +284,9 @@ s
 
 
 
-    <div class="container my-1 d-grid gap-2 col-2 mx-auto">
+    <!-- <div class="container my-1 d-grid gap-2 col-2 mx-auto">
         <button type="button" class="btn btn-outline-primary">Update News</button>
-    </div>
+    </div> -->
 
 
 
@@ -281,8 +298,8 @@ s
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Politics</h5>
-                    <p class="card-text">Politics of India works within the framework of the country's Constitution.</p>
-                    <a href="#" class="btn btn-primary">Go to main website</a>
+                    <p class="card-text">Politics is the set of activities that are associated with making decisions in groups, or other forms of power relations among individuals, such as the distribution of resources or status.</p>
+                    <a href="{% url 'categories_po'%}" class="btn btn-primary">Explore more in Politics ..</a>
                 </div>
             </div>
 
@@ -291,9 +308,8 @@ s
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sports</h5>
-                    <p class="card-text">The main aim of sport is to use, maintain or improve physical ability and
-                        skills.</p>
-                    <a href="#" class="btn btn-primary">Go to main website</a>
+                    <p class="card-text">Sport pertains to any form of competitive physical activity or game that aims to use, maintain or improve physical ability and skills while providing enjoyment to participants and, in some cases, entertainment to spectators. </p>
+                    <a href="{% url 'categories_sp'%}" class="btn btn-primary">Explore more in Sports ..</a>
                 </div>
             </div>
 
@@ -303,9 +319,8 @@ s
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Education</h5>
-                    <p class="card-text">Education refers to the discipline that is concerned with methods of teaching
-                        and learning in schools or school-like environments.</p>
-                    <a href="#" class="btn btn-primary">Go to main website</a>
+                    <p class="card-text">Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, habits, and personal development. Education originated as transmission of cultural heritage from one generation to the next. </p>
+                    <a href="{% url 'categories_edu'%}" class="btn btn-primary">Explore more in Education ..</a>
                 </div>
             </div>
 
@@ -317,9 +332,9 @@ s
                 <img src="https://www.luminadatamatics.com/wp-content/uploads/2020/10/immersive_technology_services.jpg"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Tech</h5>
-                    <p class="card-text">An abbreviation of technology or technician.</p>
-                    <a href="#" class="btn btn-primary">Go to main website</a>
+                    <h5 class="card-title">Technology</h5>
+                    <p class="card-text">Technology is the continually developing result of accumulated knowledge and application in all techniques, skills, methods, and processes used in industrial production and scientific research. </p>
+                    <a href= "{% url 'categories_tec'%}" class="btn btn-primary">Explore more in Technology ..</a>
                 </div>
             </div>
 
@@ -328,8 +343,8 @@ s
                 <div class="card-body">
                     <h5 class="card-title">Weather</h5>
                     <p class="card-text">Weather is the state of the atmosphere, describing for example the degree to
-                        which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.</p>
-                    <a href="#" class="btn btn-primary">Go to main website</a>
+                        which it is hot or cold, wet or dry, calm or stormy, clear or cloudy. Weather is the day-to-day or hour-to-hour change in the atmosphere. </p>
+                    <a href="{% url 'categories_wea'%}" class="btn btn-primary">Explore more in Weather ..</a>
                 </div>
             </div>
 
@@ -338,7 +353,7 @@ s
 
 
 
-    <footer>
+    <!-- <footer>
 
 
         <div class="cus container-sm  d-flex justify-content-center align-items-center  ">
@@ -357,7 +372,7 @@ s
                         <img id="wp_thbn_39" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAABWCAMAAADCF/krAAAARVBMVEX///9dqd1Yp9xRpNtKodrz+Py41u7K4PJxsuD7/f7B2/Cbxuifyenn8fna6fbT5fSw0uySwuaAueOIveRprt/g7fepzuuh29q1AAACuUlEQVRoge2Z25akIAxFJQHFWyl4+f9PHbTG7tJCkIDzMMv92K0cTkgCUln28PDw8PDwXyC6uVaqyafyX6oWGhHBgHxs2t2/XvepdhKBbRjtWvxOaKwIA4r5ylMNZ3uQTe/X+xGBIGtGLPwPaWRfmPfaXHMA3hFkSxMz73uDRXaxzJfY40CQzTpkgJ68mK2y21qPpOxuzIw9jqfj2u5k2ZpgwRmt1yzlrowc4VwWpXH7qrF1vG9FvgflzekTncMuqFc/IL+SmnvKzQxqcfLI4LBrlsikFvahsh9BBLBPunSoMl+szpG/bnCwWX65kpksu4si2AJWeXQpQTbku2GRVcdqdBavmWtwSr2ZDsPi2O+jPbvSivlazjnH6gSE4bONuP2GF+5G8T2ukVbV5jq/STcbbeOZzZ2pvmtF2d2le1zhD23TiZh1Wj/ws25zgdzV9z1w4lGrXOY704U50atAZc4rlbNWHMBI1DX7AmfDrIjCoIm6a382Z1Oq30uHQhsNVXIFiV1yPV9FEFFGUX4ZWTbrIwyDouvGGEbKB8qG69zm043okt6d/Rx69b5RROGoMK+OiaGOCvNCBwTLUMfKZks5YWhiR+z5f1k30a4OtEv6/tyRa6WUdn1/WeDRdjPBIXhPSmDXVFJ404o5Wf1QBqcz8fPkSBFYwSCTyAY3S5wS6Yb1rERRXqn45eSK3RD2CH2xZQFLfDH6UstVmE8cIL5jHBGvfJYe4XQ5taPy2CVdR3oRtivQzyDzOy6bxexJamDp1zZrZ+a7vJEpuvIOUWjvoYOnOGF8anYmib3Fe+Gi+iKFlFpLxi8UrVFV6bpFOfttvlW5TpvH4oqyUU1ftCIfncUDyNVNPxBNzXKPbBEH83f5dWWZVDrX6yX2L4jIZFMkL9gvyrbLm0HLBT3UfTHdr/nw8PDw8Aff5Bm9iAZ8kwAAAABJRU5ErkJggg==" class="rISBZc zr758c M4dUYb" height="30" width="50" alt="" data-atf="1" data-frt="0">
                     </li>
                     <li class="mx-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png" alt="File:Gmail icon (2020).svg - Wikimedia Commons" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 20px;height: 20px;margin: 0px;">
+                       <a href ="https://mail.google.com/mail/?view=cm&fs=1&to= teambitsandbytesx@gmail.com "> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png" alt="File:Gmail icon (2020).svg - Wikimedia Commons" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 20px;height: 20px;margin: 0px;"></a>
                     </li>
                 </ul>
             </div>
@@ -369,7 +384,7 @@ s
                 PBL PROJECT &copy COPYRIGHT;
             
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

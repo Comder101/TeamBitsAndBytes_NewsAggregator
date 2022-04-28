@@ -54,7 +54,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">News Aggregator</a>
+            <a class="navbar-brand" href="{% url 'main'%}">News Aggregator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -67,21 +67,21 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="{% url 'about'%}">About us</a>
-                        </li>
+                        <!-- </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Category
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Politics</a></li>
-                                <li><a class="dropdown-item" href="#">Sport</a></li>
-                                <li><a class="dropdown-item" href="#">Education</a></li>
-                                <li><a class="dropdown-item" href="#">Technology</a></li>
-                                <li><a class="dropdown-item" href="#">Weather</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_po'%}">Politics</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_sp'%}">Sports</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_edu'%}">Education</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_tec'%}">Technology</a></li>
+                                <li><a class="dropdown-item" href="{% url 'categories_wea'%}">Weather</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -132,7 +132,7 @@
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -215,12 +215,12 @@
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch"
                                         id="flexSwitchCheckDefault_b">
-                                   <label class="form-check-label" for="flexSwitchCheckDefault_b">sport</label>
+                                   <label class="form-check-label" for="flexSwitchCheckDefault_b">Sports</label>
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch"
                                         id="flexSwitchCheckDefault_c">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault_c">politics</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault_c">Politics</label>
                                 </div>
 
                             </div>
@@ -229,12 +229,12 @@
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch"
                                         id="flexSwitchCheckDefault_d">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault_d">weather</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault_d">Weather</label>
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch"
                                         id="flexSwitchCheckDefault_e">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault_e">Tech</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault_e">Technology</label>
                                 </div>
 
 
@@ -285,7 +285,7 @@ s
 
 
 
-    <div class="container">
+    <!-- <div class="container">
 
         <div>
 
@@ -332,10 +332,10 @@ s
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
+        </div> -->
 
 
-    </div>
+    <!-- </div> -->
 
 
     <div class="heading container-sm">
@@ -357,7 +357,7 @@ s
         <h3>Students of PICT, Pune</h3>
     </div>
     <div class="students">
-        <ul>
+        <ul style="list-style-type: none;">
             <li>Mandar Kulkarni</li>
             <li>Pratik More</li>
             <li>Prasad Patil</li>
@@ -365,12 +365,6 @@ s
             <li>Krushikesh Pisal</li>
         </ul>
     </div>
-
-
-
-
-
-
 
 
     <footer>
@@ -381,7 +375,7 @@ s
 
                 <ul class=" facebookimg cont d-flex justify-content-between">
                     <li class="mx-2">
-                        Contact US
+                        Contact Us
                     </li>
                     <li class=" mx-2">
                         <div>
@@ -402,10 +396,8 @@ s
                             class="rISBZc zr758c M4dUYb" height="30" width="50" alt="" data-atf="1" data-frt="0">
                     </li>
                     <li class="mx-2">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png"
-                            alt="File:Gmail icon (2020).svg - Wikimedia Commons" jsaction="load:XAeZkd;" jsname="HiaYvf"
-                            class="n3VNCb" data-noaft="1" style="width: 20px;height: 20px;margin: 0px;">
-                    </li>
+                        <a href ="https://mail.google.com/mail/?view=cm&fs=1&to= teambitsandbytesx@gmail.com "> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png" alt="File:Gmail icon (2020).svg - Wikimedia Commons" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 20px;height: 20px;margin: 0px;"></a>
+                     </li>
                 </ul>
             </div>
 
