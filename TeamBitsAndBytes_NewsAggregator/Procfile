@@ -1,1 +1,0 @@
-web: gunicorn TeamBitsAndBytes_NewsAggregator.wsgi:application --log-file 
