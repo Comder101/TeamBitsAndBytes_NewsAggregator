@@ -1,7 +1,8 @@
 
 from django.urls import path
 from news import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -15,8 +16,11 @@ urlpatterns = [
     path('technology',views.categories_tec, name="categories_tec"),
     path('weather',views.categories_wea, name="categories_wea"),
     
-    ]
+    ] 
     
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 
     
